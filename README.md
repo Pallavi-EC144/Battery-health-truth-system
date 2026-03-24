@@ -192,30 +192,52 @@ Simulates capacity loss over charge cycles:
 
 ### Project Structure
 battery-health-truth-system/
+
 │
+
 ├── README.md # You are here
+
 ├── requirements.txt # Python dependencies
+
 ├── app.py # Streamlit dashboard
+
 │
+
 ├── src/
+
 │ ├── init.py # Package init
+
 │ ├── battery_simulator.py # Battery physics model
+
 │ ├── kalman_filter.py # 1D Kalman filter
+
 │ ├── soc_estimator.py # SoC estimation logic
+
 │ └── visualizer.py # Plotting utilities
+
 │
+
 └── outputs/
+
 └── (generated plots)
+
 
 ### Technology Stack
 
 | Layer | Technology | Purpose |
+
 |-------|------------|---------|
+
 | **Frontend** | Streamlit | Interactive dashboard |
+
 | **Signal Processing** | NumPy/SciPy | Kalman filter, numerical ops |
+
 | **Visualization** | Matplotlib, Plotly | 2D/3D plots |
+
 | **Simulation** | Custom Python | Battery physics model |
+
 | **Deployment** | Streamlit Cloud | Live web app |
+
 
 ---
 
