@@ -38,49 +38,94 @@ Phone battery percentages are notoriously unreliable because:
 
 ## 🧠 How It Works (The ECE Magic)
 ┌─────────────────────────────────────────────────────────────┐
+
 │ BATTERY SIMULATION │
+
 │ (Hidden Reality - What's actually happening) │
+
+
 │ │
+
 │ ┌──────────────┐ ┌──────────────┐ │
+
 │ │ Non-linear │ │ Load- │ │
+
 │ │ Discharge │ ──► │ dependent │ ──► True SoC │
+
 │ │ Curve │ │ IR Drop │ │
+
 │ └──────────────┘ └──────────────┘ │
+
 └─────────────────────────────────────────────────────────────┘
+
 │
+
 ▼
+
 ┌─────────────────────────────────────────────────────────────┐
+
 │ MEASUREMENT LAYER (Noisy Sensors) │
+
 │ │
+
 │ Voltage: 3.85V ± 0.02V Current: 0.8A ± 0.05A │
+
 │ (Adds realistic noise to simulate real sensors) │
+
 └─────────────────────────────────────────────────────────────┘
+
 │
+
 ▼
+
 ┌─────────────────────────────────────────────────────────────┐
+
 │ KALMAN FILTER (The Brain) │
+
 │ │
+
 │ ┌─────────────────────────────────────────────────────┐ │
+
 │ │ Step 1: Predict (Coulomb Counting) │ │
+
 │ │ ΔSoC = (I × Δt) / Capacity │ │
+
 │ │ │ │
+
 │ │ Step 2: Update (Voltage Correction) │ │
+
 │ │ SoC = SoC_pred + K × (V_measured - V_pred) │ │
+
 │ │ │ │
+
 │ │ Step 3: Kalman Gain (Optimal Fusion) │ │
+
 │ │ K = P/(P + R) — balances trust in model vs sensor │ │
+
 │ └─────────────────────────────────────────────────────┘ │
+
 └─────────────────────────────────────────────────────────────┘
+
 │
+
 ▼
+
 ┌─────────────────────────────────────────────────────────────┐
+
 │ OUTPUT LAYER │
+
 │ │
+
 │ 📊 Estimated SoC: 67.3% │
+
 │ 🔋 Battery Health: 92% │
+
 │ ⏰ Time Remaining: 2h 14m │
+
 │ 📉 Error vs True: ±3.2% │
+
 └─────────────────────────────────────────────────────────────┘
+
 
 ---
 
@@ -121,15 +166,25 @@ Simulates capacity loss over charge cycles:
 
 ### Sample Output
 ┌─────────────────────────────────────────┐
+
 │ BATTERY STATUS │
+
 ├─────────────────────────────────────────┤
+
 │ Displayed: 45% │
+
 │ True Battery: 38% │
+
 │ Estimated Time: 47 minutes │
+
 │ Battery Health: 87% (1,200 cycles) │
+
 │ │
+
 │ ⚠️ Discrepancy: 7% under-reporting │
+
 └─────────────────────────────────────────┘
+
 
 ---
 
@@ -170,7 +225,7 @@ battery-health-truth-system/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/battery-health-truth-system.git
+git clone https://github.com/Pallavi-EC144/battery-health-truth-system.git
 
 # Navigate to project
 cd battery-health-truth-system
