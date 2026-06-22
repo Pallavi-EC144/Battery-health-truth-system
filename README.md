@@ -36,7 +36,7 @@ Phone battery percentages are notoriously unreliable because:
 
 ---
 
-## 🧠 How It Works (The ECE Magic)
+## 🧠 How It Works 
 ┌─────────────────────────────────────────────────────────────┐
 
 │ BATTERY SIMULATION │
